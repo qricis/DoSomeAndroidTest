@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IntentCallback</string>
+    <string name="button_get_data">获取数据</string>
+    <string name="button_return_data">返回数据</string>
+</resources>
