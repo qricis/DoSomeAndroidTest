@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ServiceTest</string>
+    <string name="stop_service">stop service</string>
+    <string name="start_service">start service</string>
+    <string name="bind_service">bind service</string>
+    <string name="unbind_service">unbind service</string>
+    <string name="start_intent_service">start intent service</string>
+</resources>
