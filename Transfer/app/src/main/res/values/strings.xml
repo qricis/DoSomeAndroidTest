@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Transfer</string>
+    <string name="text_input">请输入文字</string>
+    <string name="text_nothing">没有接收到数据</string>
+    <string name="button_simple">简单参数</string>
+    <string name="button_serializable">Serializable</string>
+    <string name="button_parcelable">Parcelable</string>
+    <string name="button_to_result">回调机制</string>
+</resources>
