@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RecyclerViewTest</string>
+    <string name="image_fruit_description">fruit pictures</string>
+
+</resources>

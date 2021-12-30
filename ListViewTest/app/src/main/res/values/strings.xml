@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ListViewTest</string>
+    <string name="image_fruit_description">this is image of fruit</string>
+</resources>
