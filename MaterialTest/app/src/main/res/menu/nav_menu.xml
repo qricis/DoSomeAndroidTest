@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  在menu里面嵌套一个group，将之属性设置为single，表示菜单中的所有属性只能单选  -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@drawable/nav_call"
+            android:title="@string/nav_call"/>
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/nav_friends"
+            android:title="@string/nav_friend"/>
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/nav_location"
+            android:title="@string/nav_location"/>
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@drawable/nav_mail"
+            android:title="@string/nav_mail"/>
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@drawable/nav_task"
+            android:title="@string/nav_task"/>
+
+    </group>
+
+</menu>

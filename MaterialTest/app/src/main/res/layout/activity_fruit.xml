@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!--  标题栏部分实现  -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fitsSystemWindows="true">
+
+        <!-- 设定高级的标题栏属性
+                contentScrim用于指定其趋于折叠状态以及折叠之后的背景色
+                layout_scrollFlags属性中，scroll表示会随着内容详情的滚动而滚动，exitUntilCollapsed表示当其随着滚动完成折叠之后就保留在界面上，不再移出屏幕-->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+
+            <!-- layout_collapseMode属性用于指定当前控件在其折叠过程中的折叠模式
+                    parallax表示在折叠过程中产生一定的错位偏移，pin表示在折叠过程中位置始终保持不变
+                    android:fitsSystemWindows="true"借助这一属性，让背景图和状态栏融合，且必须将其所有父布局都设成true，除此之外，需要在styles中将状态栏设定为透明色-->
+            <ImageView
+                android:id="@+id/fruit_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                android:contentDescription="@string/this_is_a_pics"
+                android:fitsSystemWindows="true"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 内容详情部分实现 -->
+    <!-- ScrollView实现滚动的方式来查看屏幕以外的数据
+           NestedScrollView增加了实现嵌套响应滚动事件的功能
+           layout_behavior指定了一个布局行为，使得不挡住标题栏-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="34dp"
+                app:cardCornerRadius="4dp">
+
+                <TextView
+                    android:id="@+id/fruit_name_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 制作评论的悬浮图标 -->
+    <!-- layout_anchor指定了一个锚点，我们指定了AppBarLayout，该悬浮按钮就会出现在标题栏区域内 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_comment"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="bottom|end"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

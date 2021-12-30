@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--  该控件用于作为主屏幕中显示的内容，以及toolBar  -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--  防止页面内容覆盖住标题层  -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--layout_scrollFlags属性中，scroll表示当RecyclerView向上滚动的时候，ToolBar会跟着一起向上滚动并实现隐藏
+                 enterAlways表示当向下滚动时，会一起向下滚动并显示
+                 snap表示当ToolBar还没有完全显示或隐藏的时候，会根据当前滚动的距离，自动选择是隐藏还是显示-->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.DayNight"
+                app:layout_scrollFlags="scroll|enterAlways|snap"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--实现下拉刷新-->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <!--  替换系统背景颜色android:backgroundTint="#fff"
+                  替换系统背景颜色和系统边框颜色app:backgroundTint="#009688"
+                  替换图标默认颜色android:tint="#fff"-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:tint="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_done"
+            android:elevation="8dp"
+            android:onClick="fabClick"
+            app:backgroundTint="#009688"
+            tools:targetApi="lollipop" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--  layout_gravity指定了菜单所处的方向，且必须指定
+            如果是left就在左边，right就在右边，start表示跟随系统语言方向，从左往右就在左边
+            通过menu和headerLayout属性将刚才准备好的布局添加进去-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--  showAsAction的三种含义
+            always表示永远显示在toolBar中
+            ifRoom表示若屏幕空间足够显示在toolBar中
+            never表示永远显示在菜单当中
+            且toolBar中只会显示图片
+            菜单中只会显示文字-->
+    <item
+        android:id="@+id/backup"
+        android:icon="@drawable/ic_backup"
+        android:title="@string/ic_backup"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/ic_delete"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/ic_settings"
+        app:showAsAction="never"/>
+</menu>
