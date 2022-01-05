@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProviderTest</string>
+    <string name="add_button">Add Button</string>
+    <string name="query_button">Query Button</string>
+    <string name="delete_button">Delete Button</string>
+    <string name="update_button">Update Button</string>
+</resources>
