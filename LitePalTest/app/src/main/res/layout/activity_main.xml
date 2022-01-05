@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <Button
+        android:id="@+id/create_database"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:onClick="createDatabase"
+        android:text="@string/create_database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <Button
+        android:id="@+id/add_database"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:onClick="addDatabase"
+        android:text="@string/add_database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_database"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <Button
+        android:id="@+id/update_database"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:onClick="updateDatabase"
+        android:text="@string/update_database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_database"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <Button
+        android:id="@+id/delete_database"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:onClick="deleteDatabase"
+        android:text="@string/delete_database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_database"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <Button
+        android:id="@+id/query_database"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:onClick="queryDatabase"
+        android:text="@string/query_database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete_database"
+        app:layout_constraintVertical_bias="0.128" />
+</androidx.constraintlayout.widget.ConstraintLayout>
