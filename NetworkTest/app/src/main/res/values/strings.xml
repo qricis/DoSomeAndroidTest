@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NetworkTest</string>
+    <string name="sendrequest">sendRequest</string>
+</resources>
