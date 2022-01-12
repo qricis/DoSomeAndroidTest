@@ -1,0 +1,14 @@
+<litepal>
+
+    <!--  设置数据库名为cool_weather，数据库版本1，并将三个实体类映射到列表当中  -->
+    <dbname value="cool_weather" />
+
+    <version value="1" />
+
+    <list>
+        <mapping class="com.coolweather.android.db.Province" />
+        <mapping class="com.coolweather.android.db.City" />
+        <mapping class="com.coolweather.android.db.County" />
+    </list>
+
+</litepal>

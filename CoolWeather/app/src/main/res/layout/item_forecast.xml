@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--用于显示天气预报日期、天气概况、最高温、最低温-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:id="@+id/item_forecast_data_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_gravity="center_vertical"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/item_forecast_info_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/item_forecast_max_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/item_forecast_min_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        android:textColor="#fff" />
+</LinearLayout>

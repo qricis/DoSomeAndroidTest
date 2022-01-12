@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">阿七天气</string>
+    <string name="weather_forecast_text_view">预报</string>
+    <string name="weather_aqi_title">空气质量</string>
+    <string name="weather_aqi_aqi_info">AQI指数</string>
+    <string name="weather_aqi_pm25_info">PM2.5指数</string>
+    <string name="weather_suggestion_title">生活建议</string>
+    <string name="bing_pic_img">bing_pic_img</string>
+</resources>
