@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CameraAlbumTest</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_photo">Choose from album</string>
+    <string name="just_a_picture">Just a picture</string>
+</resources>

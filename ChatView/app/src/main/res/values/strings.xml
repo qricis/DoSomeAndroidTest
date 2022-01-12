@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ChatView</string>
+    <string name="input_text">Type something here</string>
+    <string name="btn_send">send</string>
+</resources>

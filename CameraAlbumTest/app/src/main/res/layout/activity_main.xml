@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/take_photo"
+        android:layout_width="222dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="172dp"
+        android:onClick="takePhoto"
+        android:text="@string/take_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/choose_from_album"
+        android:layout_width="222dp"
+        android:layout_height="50dp"
+        android:onClick="choosePhoto"
+        android:text="@string/choose_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/take_photo" />
+
+    <ImageView
+        android:id="@+id/get_imageView"
+        android:layout_width="318dp"
+        android:layout_height="279dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_from_album"
+        app:layout_constraintVertical_bias="0.292"
+        android:contentDescription="@string/just_a_picture" />
+</androidx.constraintlayout.widget.ConstraintLayout>
